@@ -1,3 +1,3 @@
 # Cyber security
 
-Thapana Senrat (Benz)
+Thapana Senrat (Benzz)
