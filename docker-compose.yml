@@ -7,8 +7,8 @@ services:
   environment:
     - POSTGRES_DB=thapana
     - POSTGRES_USER=thapana
-    - POSTGRES_PASSWORD=thapana
-  web:
+    - POSTGRES_PASSWORD=thapana 
+web:
     image: prawee/strapi:latest
     container_name: my_app_compose
     ports:
@@ -18,4 +18,4 @@ services:
       - DATABASE_PORT=55432
       - DATABASE_NAME=thapana
       - DATABASE_USERNAME=thapana
-      - DATABASE_PASSWORD=thapana
+      - DATABASE_PASSWORD=thapana 
