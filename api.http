@@ -4,9 +4,14 @@
 @email={{$env EMAIL}}
 @Content={{$env CONTENT_TYPE}}
 @Authorization={{$env AUTHORIZATION}}
+@post_register={{$env POST_REGISTER}}
+@get_alluser={{@env GET_ALLUSER}}
+@post_login={{@env POST_LOGIN}}
+@get_profile={{@env GET_PROFILE}}
+@put_updateprofile={{@env PUT_UPDATEPROFILE}}
 
 ### Identifition / Register account
-POST http://localhost:8080/api/auth/local/register HTTP/1.1
+POST {{post_register}}
 Content-Type: {{Content}}
 
 {
@@ -17,11 +22,11 @@ Content-Type: {{Content}}
 
 
 ### Get all users
-GET http://localhost:8080/api/users HTTP/1.1
+GET {{get_alluser}}
 Content-Type: {{Content}}
 
 ### Authentication / Login
-POST http://localhost:8080/api/auth/local HTTP/1.1
+POST {{post_login}}
 Content-Type: {{Content}}
 
 {
@@ -30,12 +35,12 @@ Content-Type: {{Content}}
 }
 
 ### Get profile
-GET http://localhost:8080/api/users/me HTTP/1.1
+GET {{get_profile}}
 Content-Type: {{Content}}
 Authorization: {{Authorization}}
 
 ### Update Profile
-PUT http://localhost:8080/api/users/1 HTTP/1.1
+PUT {{put_updateprofile}}
 Content-Type: {{Content}}
 Authorization: {{Authorization}}
 
