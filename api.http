@@ -9,6 +9,7 @@
 @post_login={{@env POST_LOGIN}}
 @get_profile={{@env GET_PROFILE}}
 @put_updateprofile={{@env PUT_UPDATEPROFILE}}
+@update_user={{@env USER_UPDATE}}
 
 ### Identifition / Register account
 POST {{post_register}}
@@ -45,5 +46,5 @@ Content-Type: {{Content}}
 Authorization: {{Authorization}}
 
 {
-    "username": "{{username}}"
+    "username": "{{update_user}}"
 }
