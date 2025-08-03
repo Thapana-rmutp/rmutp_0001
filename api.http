@@ -1,15 +1,15 @@
 # Test API
-@username={{$env USERNAME}}
-@password={{$env PASSWORD}}
-@email={{$env EMAIL}}
-@Content={{$env CONTENT_TYPE}}
-@Authorization={{$env AUTHORIZATION}}
-@post_register={{$env POST_REGISTER}}
-@get_alluser={{@env GET_ALLUSER}}
-@post_login={{@env POST_LOGIN}}
-@get_profile={{@env GET_PROFILE}}
-@put_updateprofile={{@env PUT_UPDATEPROFILE}}
-@update_user={{@env USER_UPDATE}}
+@username={{$dotenv USERNAME}}
+@password={{$dotenv PASSWORD}}
+@email={{$dotenv EMAIL}}
+@Content={{$dotenv CONTENT_TYPE}}
+@Authorization={{$dotenv AUTHORIZATION}}
+@post_register={{$dotenv POST_REGISTER}}
+@get_alluser={{$dotenv GET_ALLUSER}}
+@post_login={{$dotenv POST_LOGIN}}
+@get_profile={{$dotenv GET_PROFILE}}
+@put_updateprofile={{$dotenv PUT_UPDATEPROFILE}}
+@update_user={{$dotenv USER_UPDATE}}
 
 ### Identifition / Register account
 POST {{post_register}}
